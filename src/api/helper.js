@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'https://api.github.com';
+const URL = 'https://api.github.com/';
 
 export const fullUrlFrom = (endpoint) => {
   if (endpoint[0] !== '/') endpoint = `/${endpoint}`;

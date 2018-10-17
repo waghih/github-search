@@ -1,0 +1,18 @@
+@mixin searchbar {
+  .search-container {
+    .form-control-error {
+      border-color: $red
+    }  
+  
+    .form-error-messages {
+      color: $red;
+      font-size: 0.75rem;
+    }
+
+    .form-control {
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

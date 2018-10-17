@@ -5,13 +5,13 @@ import api from 'api';
 function* searchRepositories({ params }) {
   try {
     const response = yield call(api.searchRepositories, params);
-    if (response) {
-      yield put(Actions.searchRepositoriesSuccess({}));
+    if (response && response.status === 200) {
+      yield put(Actions.searchRepositoriesSuccess(response.data));
     } else {
-      yield put(Actions.searchRepositoriesFail('error'));
+      yield put(Actions.searchRepositoriesFail('Something went wrong'));
     }
   } catch (error) {
-    console.log(error);
+    yield put(Actions.searchRepositoriesFail(error));
   }
 }
 

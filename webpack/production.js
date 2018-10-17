@@ -23,7 +23,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      common: path.resolve(__dirname, '../src/components/common'),
+      components: path.resolve(__dirname, '../src/components'),
       actions: path.resolve(__dirname, '../src/actions'),
       reducers: path.resolve(__dirname, '../src/reducers'),
       sagas: path.resolve(__dirname, '../src/sagas'),
