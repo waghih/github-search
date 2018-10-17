@@ -4,3 +4,9 @@
 npm install
 npm start
 ```
+
+To run test suites:
+
+```
+npm run test
+```
